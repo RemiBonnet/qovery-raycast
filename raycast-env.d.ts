@@ -7,12 +7,7 @@
 
 /* eslint-disable @typescript-eslint/ban-types */
 
-type ExtensionPreferences = {
-  /** Qovery API Token - Your Qovery API token for authentication */
-  "apiToken": string,
-  /** Organization ID - Your Qovery organization ID */
-  "organizationId": string
-}
+type ExtensionPreferences = {}
 
 /** Preferences accessible in all the extension's commands */
 declare type Preferences = ExtensionPreferences
