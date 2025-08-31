@@ -454,9 +454,9 @@ export default function Command() {
                 onAction={() => fetchServiceLinks(service)}
                 shortcut={{ modifiers: ["cmd"], key: "l" }}
               />
-              <Action.CopyToClipboard title="Copy Project ID" content={service.project_id} />
-              <Action.CopyToClipboard title="Copy Environment ID" content={service.environment_id} />
-              <Action.CopyToClipboard title="Copy Service ID" content={service.id} />
+              <Action.CopyToClipboard title="Copy Project Id to Clipboard" content={service.project_id} />
+              <Action.CopyToClipboard title="Copy Environment Id to Clipboard" content={service.environment_id} />
+              <Action.CopyToClipboard title="Copy Service Id to Clipboard" content={service.id} />
               <Action.CopyToClipboard title="Copy Service Name" content={service.name} />
               <Action
                 title="Refresh Services"
