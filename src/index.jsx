@@ -6,7 +6,6 @@ import {
   showToast,
   Toast,
   Form,
-  useNavigation,
   LocalStorage,
   Icon,
 } from "@raycast/api";
@@ -25,7 +24,6 @@ export default function Command() {
   const [selectedService, setSelectedService] = useState(null);
   const [serviceLinks, setServiceLinks] = useState([]);
   const [isLoadingLinks, setIsLoadingLinks] = useState(false);
-  const { push } = useNavigation();
 
   useEffect(() => {
     loadStoredCredentials();
@@ -137,7 +135,7 @@ export default function Command() {
             Authorization: `Token ${token}`,
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (!response.ok) {
@@ -145,7 +143,7 @@ export default function Command() {
           throw new Error("Invalid API token. Please check your credentials.");
         } else if (response.status === 404) {
           throw new Error(
-            "Organization not found. Please check your organization ID."
+            "Organization not found. Please check your organization ID.",
           );
         } else {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -186,8 +184,7 @@ export default function Command() {
       return null;
     }
 
-    const serviceType =
-      service.service_type === "DATABASE" ? "database" : "application";
+    const serviceType = service.service_type?.toLowerCase() || "application";
     const url = `https://console.qovery.com/organization/${organizationId}/project/${service.project_id}/environment/${service.environment_id}/${serviceType}/${service.id}/general`;
     return url;
   };
@@ -433,7 +430,7 @@ export default function Command() {
     return (
       <List>
         <List.EmptyView
-          icon="assets/favicons/favicon.svg"
+          icon="assets/icon.png"
           title="Error"
           description={error}
           actions={

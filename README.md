@@ -31,11 +31,6 @@ This Raycast extension displays all services from a Qovery organization with dyn
 3. Navigate to the API Tokens section
 4. Create a new API token
 
-### Getting your Organization ID
-
-Your organization ID can be found in the URL when you're viewing your organization in the Qovery console:
-`https://console.qovery.com/organization/{organization-id}/...`
-
 ## Usage
 
 1. Open Raycast
@@ -54,26 +49,6 @@ Your organization ID can be found in the URL when you're viewing your organizati
 - **⌘ + R**: Refresh services list
 - **⌘ + C**: Change credentials
 - **⌘ + Enter**: Submit credential form
-
-## Service Types
-
-The extension supports different service types with appropriate icons:
-
-- 📱 Applications
-- 🐳 Containers
-- 🗄️ Databases
-- ⚙️ Jobs
-- 🔧 Other services
-
-## Status Indicators
-
-- 🟢 Running
-- 🔴 Stopped
-- 🟡 Deploying
-- ❌ Error
-- ⚪ Unknown
-
-## Credential Management
 
 ### Changing Credentials
 
