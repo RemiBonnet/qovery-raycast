@@ -1,5 +1,15 @@
 import { useState, useEffect } from "react";
-import { List, ActionPanel, Action, showToast, Toast, LocalStorage, Icon, getPreferenceValues } from "@raycast/api";
+import {
+  List,
+  ActionPanel,
+  Action,
+  showToast,
+  Toast,
+  LocalStorage,
+  Icon,
+  getPreferenceValues,
+  type PreferenceValues,
+} from "@raycast/api";
 
 interface Service {
   id: string;
@@ -23,12 +33,8 @@ interface ServiceLink {
   url: string;
 }
 
-interface Preferences {
-  apiToken: string;
-}
-
 export default function Command() {
-  const preferences = getPreferenceValues<Preferences>();
+  const preferences = getPreferenceValues<PreferenceValues>();
   const [services, setServices] = useState<Service[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
