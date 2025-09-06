@@ -143,36 +143,18 @@ export default function Command() {
     setError(null);
 
     try {
-<<<<<<< HEAD:src/index.tsx
       const response = await fetch(`https://api.qovery.com/organization/${orgId}/services`, {
         headers: {
           Authorization: `Token ${token}`,
           "Content-Type": "application/json",
         },
       });
-=======
-      const response = await fetch(
-        `https://api.qovery.com/organization/${orgId}/services`,
-        {
-          headers: {
-            Authorization: `Token ${token}`,
-            "Content-Type": "application/json",
-          },
-        },
-      );
->>>>>>> origin/ext/qovery:src/index.jsx
 
       if (!response.ok) {
         if (response.status === 401) {
           throw new Error("Invalid API token. Please check your credentials.");
         } else if (response.status === 404) {
-<<<<<<< HEAD:src/index.tsx
           throw new Error("Organization not found. Please check your organization ID.");
-=======
-          throw new Error(
-            "Organization not found. Please check your organization ID.",
-          );
->>>>>>> origin/ext/qovery:src/index.jsx
         } else {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
