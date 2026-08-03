@@ -14,16 +14,11 @@ declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
   /** Preferences accessible in the `index` command */
-  export type Index = ExtensionPreferences & {
-  /** API Token - Your Qovery API token */
-  "apiToken": string
-}
+  export type Index = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
   /** Arguments passed to the `index` command */
   export type Index = {}
 }
-
-
 

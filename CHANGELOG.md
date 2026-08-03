@@ -2,6 +2,23 @@
 
 All notable changes to the Qovery Services Raycast Extension will be documented in this file.
 
+## [Unreleased]
+
+### Added
+
+- Qovery browser authentication using OAuth 2.0 Authorization Code with PKCE
+- Automatic access-token refresh using Raycast's secure OAuth token storage
+- Service discovery across every organization accessible to the signed-in user
+- Organization filtering and organization-aware service search
+
+### Changed
+
+- Removed the required API token preference and locally stored organization selection
+- Updated the Raycast API, utilities, lint configuration, TypeScript, and formatting toolchain
+- Updated Console service links to the current `/service/{id}/overview` route
+- Load independent organization service lists in parallel and report partial failures
+- Only offer public-link actions for service types supported by the Qovery API
+
 ## [1.0.0] - {PR_MERGE_DATE}
 
 ### Added
