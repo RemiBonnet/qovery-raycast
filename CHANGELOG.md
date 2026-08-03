@@ -19,25 +19,24 @@ All notable changes to the Qovery Services Raycast Extension will be documented 
 - Load independent organization service lists in parallel and report partial failures
 - Only offer public-link actions for service types supported by the Qovery API
 
-## [1.0.0] - {PR_MERGE_DATE}
+## [Security Maintenance] - 2026-05-21
+
+- Updated the extension to address security advisories.
+
+## [1.0.0] - 2025-09-09
 
 ### Added
 
 - Initial release of Qovery Services Raycast Extension
+- Dynamic credential management with local storage
 - Service list display with visual status indicators
 - Quick actions for opening services in Qovery Console
 - Copy service ID and name functionality
 - Keyboard shortcuts for common actions
+- Error handling and user-friendly messages
 - Support for different service types (Applications, Containers, Databases, Jobs)
 - Status indicators with color coding
 - Secure credential storage using Raycast LocalStorage
-
-### Features
-
-- **Dynamic Credentials**: Enter API token and organization ID directly in the extension
-- **Easy Management**: Change credentials anytime with keyboard shortcuts
-- **Service List**: View all services in your Qovery organization
-- **Quick Actions**: Open in Qovery Console, copy information, refresh list
 
 ### Technical Details
 
@@ -46,13 +45,6 @@ All notable changes to the Qovery Services Raycast Extension will be documented 
 - Implements proper error handling and validation
 - Supports all Qovery service types
 - Responsive UI with keyboard shortcuts
-
-### Documentation
-
-- Comprehensive README with setup instructions
-- Detailed installation guide
-- Demo documentation with examples
-- Security and troubleshooting information
 
 ## [0.1.0] - 2025-08-31
 
